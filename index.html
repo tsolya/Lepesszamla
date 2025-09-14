@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="hu" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lépésszámláló App</title>
+
+    <!--Stylesheets-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/stepcounter.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 id="Title"></h1>
+            <span class="themeSwitch">
+                <i class="bi bi-sun-fill" id="lightmodeBtn"></i>
+                <i class="bi bi-moon-fill" id="darkmodeBtn"></i>
+            </span>
+            
+        </header>
+        <nav>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">Menü</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav" id="loggedOutMenu">
+                      <li class="nav-item">
+                        <a class="nav-link" onclick="Render('login')" href="#">Belépés</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" onclick="Render('registration')" href="#">Regisztráció</a>
+                      </li>
+
+                    </ul>
+                    <ul class="navbar-nav" id="loggedInMenu">
+                      <li class="nav-item">
+                        <a class="nav-link" onclick="Render('stepdata')" href="#">Lépésadatok kezelése</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" onclick="Render('statistics')" >Statisztika</a>
+                      </li>
+                      
+                      <li class="nav-item">
+                        <a class="nav-link" onclick="Logout()" href="#">Kilépés</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" onclick="Render('profile'), setTimeout(getProfile,50)" >Profilom</a>
+                      </li>
+                  </div>
+                </div>
+              </nav>
+        </nav>
+        <main>
+            <!--Ide jön az aktuális tartalom-->
+        </main>
+        <footer>
+            <p id="Company"></p>
+            <p id="Author"></p>
+            <p>2025.</p>
+        </footer>
+    </div>
+    
+    <!--Scripts-->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/stepcounter.js"></script>
+
+    <!--Controllers-->
+    <script src="/controllers/userControl.js"></script>
+</body>
+</html>

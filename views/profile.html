@@ -1,0 +1,37 @@
+<h3>Profilom kezelése</h3>
+<hr>
+<div class="alert hide" id="alertReg" role="alert">
+    
+</div>
+<div class="row"></div>
+    <div class="col-12 col-lg-6">
+        <h5>Alapadatok</h5>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="nameField" placeholder="">
+            <label for="nameField">Név</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="emailField" placeholder="">
+            <label for="emailField">Email cím</label>
+        </div>
+        <button class="btn btn-primary" onclick="UpdateProfile()" id="updateProfileBtn">Adatok módosítása</button>
+    </div>
+    
+
+    <div class="col-12 col-lg-6">
+        <h5>Jelszó módosítás</h5>
+        <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="NewPassField" placeholder="">
+            <label for="NewPassField">Új jelszó</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="CNewPassField" placeholder="">
+            <label for="CNewPassField"> Új jelszó megerősítése</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="oldPassField" placeholder="">
+            <label for="oldPassField">Jelenlegi jelszó</label>
+        </div>
+        <button class="btn btn-primary" onclick="ChangePass()" id="changePassBtn">Jelszó módosítása</button>
+    </div>
+</div>
